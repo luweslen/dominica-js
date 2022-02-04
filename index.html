@@ -6,19 +6,59 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <!-- ESTILOS -->
   <link rel="stylesheet" href="./styles/main.css">
 
   <!-- ICONES -->
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://unpkg.com/akar-icons-fonts"></script>
 
   <title>DominicaJS</title>
 </head>
 
 <body>
-  <div class="calculator">
+  <main class="calculator__container">
+    <section class="calculator__screen">
+      <span class="calculator__screen-equation">34+35=</span>
+      <span class="calculator__screen-result">69</span>
+    </section>
+    <section class="calculator__keyboard">
+      <button class="button__clear-entry">CE</button>
+      <button class="button__clear-all"><i class="ai-backspace"></i></button>
+      <button class="button__division">/</button>
+      <button class="button__multiply">*</button>
+      <button class="button__seven">7</button>
+      <button class="button__eight">8</button>
+      <button class="button__nine">9</button>
+      <button class="button__decrease">-</button>
+      <button class="button__four">4</button>
+      <button class="button__five">5</button>
+      <button class="button__six">6</button>
+      <button class="button__add">+</button>
+      <button class="button__one">1</button>
+      <button class="button__two">2</button>
+      <button class="button__three">3</button>
+      <button class="button__equal">=</button>
+      <button class="button__zero">0</button>
+      <button class="button__dot">.</button>
+    </section>
+  </main>
 
-  </div>
+  <footer>
+    <a href="https://github.com/devweslen/dominica-js" target="_blank">
+      <i class="bx bx-code-block bx-sm"></i>
+      @weslendev
+    </a>
+    <a href="https://www.figma.com/community/file/1069179605549567381" target="_blank">
+      <i class="bx bxs-palette bx-sm"></i>
+      @himank1
+    </a>
+  </footer>
 
   <!-- SCRIPTS -->
   <script src="./scripts/main.js"></script>
