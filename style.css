@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --color-primary: #39E394;
+  --color-secondary: #58BEF6;
+  --color-text: #FFFFFF;
+  --color-button: #4E4E4E;
+
+  --color-background-body: linear-gradient(340.73deg, #58BEF6 5.03%, #39E394 96.89%);
+  --color-background-calculator: linear-gradient(168.16deg, #424242 0%, rgba(66, 66, 66, 0.4) 99.69%);
+  --box-shadow-background-calculator: 7px 7px 20px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+
+  padding: 2rem;
+
+  background: linear-gradient(340.73deg, #58BEF6 5.03%, #39E394 96.89%);
+}
+
+.calculator__container {
+  width: 600px;
+  height: vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(168.16deg, #424242 0%, rgba(66, 66, 66, 0.4) 99.69%);
+
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(50px);
+
+  border-radius: 18px;
+
+  padding: 1rem;
+}
+
+.calculator__header-by {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.calculator__header-by a  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #39E394;
+
+  text-decoration: none;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.calculator__header-by a:hover  {
+  opacity: 0.8;
+}
+
+.calculator__screen {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  color: #FFFFFF;
+
+  padding: 2rem 1rem;
+}
+
+.calculator__screen-equation {
+  width: 100%;
+  min-height: 40px;
+
+  text-align: end;
+
+  font-size: 36px;
+}
+
+.calculator__screen-result {
+  width: 100%;
+
+  text-align: end;
+
+  font-size: 106px;
+  font-weight: 700;
+}
+
+.calculator__keyboard {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-areas:  "clear-entry  clear-all division  multiply"
+                        "seven        eight     nine      decrease"
+                        "four         five      six       add"
+                        "one          two       three     equal"
+                        "zero         zero      dot       equal";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+}
+
+.calculator__keyboard button {
+  background: #4E4E4E;
+  color: #FFFFFF;
+  padding: 1.5rem 1rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  font-size: 1.75rem;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.calculator__keyboard button:hover {
+  opacity: 0.8;
+}
+
+.calculator__keyboard .button__clear-entry { grid-area: clear-entry; }
+.calculator__keyboard .button__clear-all { grid-area: clear-all; }
+.calculator__keyboard .button__division { grid-area: division; }
+.calculator__keyboard .button__multiply { grid-area: multiply; }
+.calculator__keyboard .button__seven { grid-area: seven; }
+.calculator__keyboard .button__eight { grid-area: eight; }
+.calculator__keyboard .button__nine { grid-area: nine; }
+.calculator__keyboard .button__decrease { grid-area: decrease; }
+.calculator__keyboard .button__four { grid-area: four; }
+.calculator__keyboard .button__five { grid-area: five; }
+.calculator__keyboard .button__six { grid-area: six; }
+.calculator__keyboard .button__add { grid-area: add; }
+.calculator__keyboard .button__one { grid-area: one; }
+.calculator__keyboard .button__two { grid-area: two; }
+.calculator__keyboard .button__three { grid-area: three; }
+.calculator__keyboard .button__equal { grid-area: equal; background: #56CB95; height: 100%; }
+.calculator__keyboard .button__zero { grid-area: zero; width: 100%; }
+.calculator__keyboard .button__dot { grid-area: dot; }
+
+@media  (max-width: 720px) {
+  body {
+    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+
+    padding: 0;
+  }
+
+  .calculator__container {
+    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+
+    border-radius: 0;
+    padding: 1rem 0.25rem 0.25rem;
+    
+    justify-content: space-between;
+  }
+
+  .calculator__header-by span {
+    display: none;
+  }
+
+  .calculator__keyboard {
+    row-gap: 0.25rem;
+    column-gap: 0.25rem;
+  }
+
+  .calculator__keyboard button {
+    font-size: 1.25rem;
+    padding: 1.25rem 1rem;
+  }
+}

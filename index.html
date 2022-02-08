@@ -6,13 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+
   <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <!-- ESTILOS -->
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./style.css">
 
   <!-- ICONES -->
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -23,45 +26,46 @@
 
 <body>
   <main class="calculator__container">
+    <header class="calculator__header">
+      <div class="calculator__header-by">
+        <a href="https://github.com/devweslen/dominica-js" target="_blank">
+          <i class="bx bx-code-block bx-sm"></i>
+          <span>@weslendev</span>
+        </a>
+        <a href="https://www.figma.com/community/file/1069179605549567381" target="_blank">
+          <i class="bx bxs-palette bx-sm"></i>
+          <span>@himank1</span>
+        </a>
+      </div>
+    </header>
     <section class="calculator__screen">
-      <span class="calculator__screen-equation">34+35=</span>
-      <span class="calculator__screen-result">69</span>
+      <span class="calculator__screen-equation"></span>
+      <span class="calculator__screen-result">0</span>
     </section>
     <section class="calculator__keyboard">
-      <button class="button__clear-entry">CE</button>
-      <button class="button__clear-all"><i class="ai-backspace"></i></button>
-      <button class="button__division">/</button>
-      <button class="button__multiply">*</button>
-      <button class="button__seven">7</button>
-      <button class="button__eight">8</button>
-      <button class="button__nine">9</button>
-      <button class="button__decrease">-</button>
-      <button class="button__four">4</button>
-      <button class="button__five">5</button>
-      <button class="button__six">6</button>
-      <button class="button__add">+</button>
-      <button class="button__one">1</button>
-      <button class="button__two">2</button>
-      <button class="button__three">3</button>
-      <button class="button__equal">=</button>
-      <button class="button__zero">0</button>
-      <button class="button__dot">.</button>
+      <button onclick="clearAll()" class="button__clear-entry">CE</button>
+      <button onclick="clearLastCharacter()" class="button__clear-all"><i class="ai-backspace"></i></button>
+      <button onclick="clickOperation('/')" class="button__division">/</button>
+      <button onclick="clickOperation('*')" class="button__multiply">*</button>
+      <button onclick="clickButtonNumber(7)" class="button__seven">7</button>
+      <button onclick="clickButtonNumber(8)" class="button__eight">8</button>
+      <button onclick="clickButtonNumber(9)" class="button__nine">9</button>
+      <button onclick="clickOperation('-')" class="button__decrease">-</button>
+      <button onclick="clickButtonNumber(4)" class="button__four">4</button>
+      <button onclick="clickButtonNumber(5)" class="button__five">5</button>
+      <button onclick="clickButtonNumber(6)" class="button__six">6</button>
+      <button onclick="clickOperation('+')" class="button__add">+</button>
+      <button onclick="clickButtonNumber(1)" class="button__one">1</button>
+      <button onclick="clickButtonNumber(2)" class="button__two">2</button>
+      <button onclick="clickButtonNumber(3)" class="button__three">3</button>
+      <button onclick="clickEqual('-')" class="button__equal">=</button>
+      <button onclick="clickButtonNumber(0)" class="button__zero">0</button>
+      <button onclick="clickDot()" class="button__dot">.</button>
     </section>
   </main>
 
-  <footer>
-    <a href="https://github.com/devweslen/dominica-js" target="_blank">
-      <i class="bx bx-code-block bx-sm"></i>
-      @weslendev
-    </a>
-    <a href="https://www.figma.com/community/file/1069179605549567381" target="_blank">
-      <i class="bx bxs-palette bx-sm"></i>
-      @himank1
-    </a>
-  </footer>
-
   <!-- SCRIPTS -->
-  <script src="./scripts/main.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
