@@ -7,6 +7,7 @@ let currentNumber = ''
 let result = ''
 
 function clickButtonNumber(number) {
+  if (currentNumber === '' && String(number) === '0') return
   currentNumber += number
   screenResult.innerHTML = currentNumber
 }
@@ -26,6 +27,7 @@ function clickOperation(operation) {
 
   if (result !== '') {
     equation = result
+    result = ''
   }
 
   currentOperation = operation
